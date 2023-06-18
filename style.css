@@ -48,7 +48,7 @@ nav ul{
 }
 
 .gameinfo{
-    padding: 0 20px;
+    padding: 0 80px;
     font-family: 'Rubik Iso', cursive;
 }
 
@@ -95,4 +95,16 @@ nav ul{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size:15px ;
     font-weight: lighter;
+}
+
+@media screen and (max-width:800px){
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameinfo{
+        margin-top: 51px;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
 }

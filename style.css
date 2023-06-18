@@ -7,14 +7,14 @@
 }
 
 nav{
-    background-color: rgb(55, 210, 182);
+    background-color: rgba(143, 185, 237, 0.441);
     color: rgb(0, 0, 0);
     height: 30px;
     font-size: 15px;
     display: flex;
     align-items: center;
     padding:0 80px ;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 nav ul{
@@ -31,7 +31,7 @@ nav ul{
     display: grid;
     grid-template-rows:repeat(3,10vw);
     grid-template-columns: repeat(3,10vw);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .box{
@@ -58,7 +58,8 @@ nav ul{
 }
 
 .imgbox img{
-    display: none;
+    width:0;
+    transition: width is ease-in-out;
 }
 
 
@@ -77,4 +78,21 @@ nav ul{
 
 .bb-0{
     border-bottom: 0;
+}
+
+.info{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+#reset{
+    margin: 15px 66px ;
+    padding: 6px 10px;
+    background: rgba(143, 185, 237, 0.441);
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:15px ;
+    font-weight: lighter;
 }

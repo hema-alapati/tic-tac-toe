@@ -24,10 +24,10 @@ const checkWin=()=>{
         [2,4,6],
     ]
     wins.forEach(e=>{
-        if((boxtext[e[0]].innerTest===boxtext[e[1]].innerText)&&(boxtext[e[2]].innerText===boxtext[e[1]].innerText)&&(boxtext[e[0]].innerText!=="")){
-            document.querySelector('.info').innerText="Player with "+boxtext[e[0]].innerText+" Won"
+        if((boxtext[e[0]].innerText===boxtext[e[1]].innerText)&&(boxtext[e[2]].innerText===boxtext[e[1]].innerText)&&(boxtext[e[0]].innerText!=="")){
+            document.querySelector('.info').innerText=boxtext[e[0]].innerText+" Won"
             isgameover=true;
-            document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width="150px"
+            document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width="200px"
         }
     })
 }
@@ -49,4 +49,17 @@ Array.from(boxes).forEach(element=>{
             }
         }
     })
+})
+
+//Add onclick listener to reset button
+reset.addEventListener('click',()=>{
+    let boxtext=document.querySelectorAll('.boxtext');
+    Array.from(boxtext).forEach(element =>{
+        element.innerText=""
+    });
+    turn = "X";
+    isgameover=false;
+    document.getElementsByClassName("info")[0].innerText="Turn for "+ turn;
+    document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width="0px"
+
 })
